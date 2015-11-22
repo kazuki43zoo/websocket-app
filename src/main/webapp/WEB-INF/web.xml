@@ -13,6 +13,7 @@
         <!-- Root ApplicationContext -->
         <param-value>
             classpath*:META-INF/spring/applicationContext.xml
+            classpath*:META-INF/spring/spring-websocket.xml
             classpath*:META-INF/spring/spring-security.xml
         </param-value>
     </context-param>

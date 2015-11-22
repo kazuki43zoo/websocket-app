@@ -10,6 +10,10 @@
     <div id="wrapper">
         <h1>Hello world!</h1>
         <p>The time on the server is ${serverTime}.</p>
+        <ul>
+            <li><a href="${pageContext.request.contextPath}/chat/stomp?roomId=1">Chat on STOMP over WebSocket</a></li>
+            <li><a href="${pageContext.request.contextPath}/chat/standard">Chat on WebSocket</a></li>
+        </ul>
     </div>
 </body>
 </html>

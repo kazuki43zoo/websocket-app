@@ -138,6 +138,15 @@
         </dependency>
               REMOVE THIS LINE IF YOU USE MyBatis3  -->
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+        </dependency>
+
         <!-- Servlet API/ JSP API -->
         <dependency>
             <groupId>org.apache.tomcat</groupId>

@@ -7,7 +7,8 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    ">
 
     <context:property-placeholder
         location="classpath*:/META-INF/spring/*.properties" />
@@ -24,6 +25,7 @@
     <mvc:default-servlet-handler />
 
     <context:component-scan base-package="com.example.app" />
+    <context:component-scan base-package="com.example.websocket" />
 
     <mvc:resources mapping="/resources/**"
         location="/resources/,classpath:META-INF/resources/"
@@ -67,6 +69,9 @@
     <mvc:view-resolvers>
         <mvc:jsp prefix="/WEB-INF/views/" />
     </mvc:view-resolvers>
+
+    <mvc:view-controller path="/chat/stomp" view-name="chat/stomp"/>
+    <mvc:view-controller path="/chat/standard" view-name="chat/standard"/>
 
     <bean id="requestDataValueProcessor"
         class="org.terasoluna.gfw.web.mvc.support.CompositeRequestDataValueProcessor">
